@@ -28,7 +28,7 @@ getTermMatrix <- memoise(function(paper) {
   if (!(paper %in% papers))
     stop("Unknown paper")
   
-  text <- readLines(sprintf("C:/Projects/R in epidemiology/first/%s.txt", paper),
+  text <- readLines(sprintf("./%s.txt", paper),
                     encoding="UTF-8")
   
   myCorpus = Corpus(VectorSource(text))
